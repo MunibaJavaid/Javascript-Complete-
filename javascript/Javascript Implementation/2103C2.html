@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2 id = "demo">Some Random text</h2>
+    <button onclick = change()>Change text</button>
+
+    <script>
+        function change(){
+        var nm = document.getElementById("demo").innerHTML = "Hello World"
+        alert(nm)
+        }
+    </script> -->
+     <form>
+        Name <input type="text" id="txt"> 
+
+        <input type="radio" name="gender">Male  
+        <input type="radio" name="gender">Female  
+        
+        <button type="button" onclick="info()">Click</button>
+</form>
+
+
+
+
+
+
+
+<p id="fetch">h3</p>
+
+<script>
+
+
+
+        function info() {
+
+
+
+
+                var  nm = document.getElementById('txt').value;  //name
+
+                var gender = document.getElementsByName('gender')[0].checked;   //male
+
+
+                if (gender) {
+                        gndr = "male";
+                }
+                else {
+                        gndr = "female";
+                }
+                var mm = document.getElementById("fetch").innerHTML = "Your name is: " + nm + " and gender is: " + gndr;
+                console.log(mm);
+        }
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+             function initialize(){
+        var num=new google.maps.LatLng(24.9273,67.0330);
+        var myoptions={
+            zoom:16,
+            center:num,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var mymap=new google.maps.Map(document.getElementById("mapcanvas"),myoptions);}
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body onload="initialize()">
+        <div id="mapcanvas"></div>
+</body>
+</html>

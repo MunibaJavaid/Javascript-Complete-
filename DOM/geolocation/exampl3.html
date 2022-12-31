@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       #mymap{
+           width: 100%;
+           height: 400px;
+       }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+     <div id="mymap"></div>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA&callback=initMap"></script>
+     <script>
+         var num={
+             lat:24.9273, 
+             lng:67.0330
+         };
+         var canmap=new google.maps.Map(document.getElementById("mymap"),{
+         center:num,
+         zoom:16}
+         );
+     </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+        <title>Document</title>
+
+        <head>
+                <style>
+                        html,
+                        body {
+                                width: 100%;
+                                height: 100%;
+                                padding: 10%
+                        }
+
+                        #map_canvas {
+                                height: 50%;
+                                width: 50%;
+                        }
+                </style>
+                <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+                <script src="https://maps.googleapis.com/maps/api/js"></script>
+                <script>
+
+
+                        // Check support for Geolocation in the browser
+                        if (navigator.geolocation) {
+                                // Locate position and invoke function
+                                navigator.geolocation.getCurrentPosition(displayPosition,
+                                        errorFunction);
+                        } else {
+                                alert("Geolocation is not enabled in your browser");
+                        }
+
+                        // Success function
+                        function displayPosition(position) {
+                                var my_lat = position.coords.latitude;
+                                var my_lng = position.coords.longitude;
+                                var div_info = document.getElementById("user_location");
+                                div_info.innerHTML = "<h1> Latitude is :" + my_lat + "and Longitude is"  + my_lng + "</h1>";
+                                div_info = alert("<h1> Latitude is :" + my_lat + "and Longitude is"  + my_lng + "</h1>");
+                                // Load Google Maps
+                                var latlng = new google.maps.LatLng(my_lat, my_lng);
+                                var myOptions = {
+                                        zoom: 2,//the initial resolution is set at which map is displayed
+                                        center: latlng, //centers the map
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP //sets the map type
+                                };
+
+
+                                // Creates the Map object
+                                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+                                // Displays icon on the located position
+                                var marker = new google.maps.Marker({
+                                        position: latlng,
+                                        map: map,
+                                        title: "User location"
+                                });
+                        }
+
+
+
+                        // Error callback function
+                        function errorFunction(pos) {
+                                alert("Error!");
+                        }
+                </script>
+        </head>
+
+<body>
+        <div id="map_canvas"></div>
+        <div id="user_location"></div>
+
+</body>
+
+</html>

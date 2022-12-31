@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showposition);
+    }
+    else{
+        alert("Not supported");
+    }
+    function showposition(position){
+        alert("Longitude "+position.coords.longitude+"latitude "+position.coords.latitude)
+    }
+
+
+      function initMap() 
+	  {
+        var aptech = 
+		{
+			lat: 24.936816, 
+			lng: 67.0614808
+			};
+        var map = new google.maps.Map(document.getElementById('map'), 
+		{
+          zoom: 14,
+          center: aptech
+        });
+        var marker = new google.maps.Marker({
+          position: aptech,
+          map: map
+        });
+      }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA&callback=initMap"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

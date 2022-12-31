@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  
+  
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    
+    <!-- <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.629362666621!2d67.05967551447988!3d24.978721846660253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb340e584b891c3%3A0x29b2cbc198ba2dbd!2sAptech%20Computer%20Education%20North%20Karachi%20Center!5e0!3m2!1sen!2s!4v1628754231442!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+     -->
+    <script>
+
+
+      function getLocation(){
+        if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(showposition);
+        }
+        else{
+          alert("Geolocation not supported");
+        }
+        function showposition(position){
+          alert("latitude" +position.coords.latitude+ "\n" +"Longitute" +position.coords.longitude);
+        }
+      }
+      function initMap() 
+	  {
+      var aptech = {
+			lat: 24.936816, 
+			lng: 67.0614808
+			};
+        var map = new google.maps.Map(document.getElementById('map'), 
+		{
+          zoom: 14,
+          center: aptech
+        });
+        var marker = new google.maps.Marker({
+          position: aptech,
+          map: map
+        });
+      }
+    </script>
+    
+    
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA&callback=initMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>  </body>
+</html>
+

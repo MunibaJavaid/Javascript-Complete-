@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+</head>
+
+<body>
+        <h1>
+                WORK ON GEOLOCATION API
+        </h1>
+
+
+        <!-- <div style="width: 300px; height: 200px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.139448255307!2d67.03085831427232!3d24.927318984022406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1627623410999!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div> -->
+
+        <div id = "demo">
+
+        </div>
+        <button type="button" onclick="getlocation()">Try it</button>
+
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+        <script>
+
+                function getlocation() {
+                        if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(showposition);
+                        }
+                        else {
+                                alert("Geolocation not supported");
+                        }
+                        function showposition(position) {
+                                alert("latitude: " + position.coords.latitude + "\n" + "Longitude: " + position.coords.longitude);
+                        }
+                }
+
+
+
+
+
+
+
+                // function getlocation() {
+                //         if (navigator.geolocation) {
+                //                 navigator.geolocation.getCurrentPosition(showPos, showErr);
+                //         }
+                //         else {
+                //                 alert("Sorry! your Browser does not support Geolocation API")
+                //         }
+                // }
+
+
+
+
+                // //Showing Current Poistion on Google Map  
+                // function showPos(position) {
+                //         latt = position.coords.latitude;
+                //         long = position.coords.longitude;
+                //         var lattlong = new google.maps.LatLng(latt, long);
+                //         var myOptions = {
+                //                 center: lattlong,
+                //                 zoom: 15,
+                //                 mapTypeControl: true,
+                                
+                //         }
+                //         var maps = new google.maps.Map(document.getElementById("demo"), myOptions);
+                //         var markers =
+                //                 new google.maps.Marker({ 
+                //                         position: lattlong, 
+                //                         map: maps, 
+                //                         title: "You are here!" });
+                // }
+
+                // //Handling Error and Rejection  
+                // function showErr(error) {
+                //         switch (error.code) {
+                //                 case error.PERMISSION_DENIED:
+                //                         alert("User denied the request for Geolocation API.");
+                //                         break;
+                //                 case error.POSITION_UNAVAILABLE:
+                //                         alert("USer location information is unavailable.");
+                //                         break;
+                //                 case error.TIMEOUT:
+                //                         alert("The request to get user location timed out.");
+                //                         break;
+                //                 case error.UNKNOWN_ERROR:
+                //                         alert("An unknown error occurred.");
+                //                         break;
+                //         }
+                // }
+
+
+
+        </script>
+
+
+
+</body>
+
+</html>

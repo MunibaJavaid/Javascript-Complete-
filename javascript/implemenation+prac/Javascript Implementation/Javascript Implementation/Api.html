@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  
+  
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    
+    
+    
+    <script>
+
+      function getLocation(){
+        if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(showposition);
+        }
+        else{
+          alert("Geolocation not supported")
+        }
+        function showposition(position){
+          alert("latitude: "+position.coords.latitude+ "\n" +"longitute is: "+position.coords.longitude);
+        }
+      }
+
+
+      function initMap() 
+	  {
+        var aptech = 
+		{
+			lat: 24.936816, 
+			lng: 67.0614808
+			};
+        var map = new google.maps.Map(document.getElementById('map'), 
+		{
+          zoom: 14,
+          center: aptech
+        });
+        var marker = new google.maps.Marker({
+          position: aptech,
+          map: map
+        });
+      }
+    </script>
+    
+    
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA&callback=initMap"></script>
+    <!--<script src="http://api.wunderground.com/api/Your_Key/conditions/q/CA/San_Francisco.json"></script>-->
+  </body>
+</html>
+

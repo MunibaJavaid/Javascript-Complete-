@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Gallery Filter using Jquery </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+
+  <script src="jquery.js"></script>
+  <style>
+    .cards:hover {
+      box-shadow: 20px 20px 100px -50px #000;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="container p-5 mt-2">
+
+    <div class="row  justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group">
+          <input type="text" placeholder="Search....." class="form-control" id="inp">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-dark" id="search">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class=" text-center text-muted mt-5" id="not_find_any_thing">Gallery Products</h1>
+  <div class="container-fluid">
+    <!-- First Row -->
+    <div class="row p-5" id="panel">
+      <!-- First Row- Start First Column -->
+      <div class="col-md-3 mt-5">
+        <!-- First Column inside bootstrap Card -->
+        <div class="cards p-2">
+          <!-- Card inside img -->
+          <img class="card-img-top" src="images/smimg1.jpg" alt="" height="300">
+          <!-- card body Start -->
+          <div class="card-body">
+            <!-- Card body inside first -->
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Samsungs</h5>
+              <p class="text-success font-weight-bold ml-5">Price: PKR 30000</p>
+            </div>
+            <!-- Card body inside Second -->
+            <p class="card-text"> <span class="font-weight-bold">Samsung galaxy s10 </span>price in Pakistan
+              is PKR 144,999/- only. Galaxy S10 is now officially available.</p>
+            <!-- Card body inside Third -->
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+            <!-- card body End -->
+          </div>
+          <!-- card End -->
+        </div>
+        <!-- First Column End -->
+      </div>
+
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/appimg1.png" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">IPhones</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Apple iPhone 12 </span> mobile price is Rs.
+              190,000 as of Aug 28, 2021 and
+              it is updated daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/infimg1.jpeg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Infinix</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Infinix Smart HD </span> mobile price is
+              Rs. 14,000 as of Aug 28, 2021 and it is updated
+              daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/smimg1.jpg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Samsungs</h5>
+              <p class="text-success font-weight-bold ml-5">Price: PKR 30000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Samsung galaxy s10 </span>price in Pakistan
+              is PKR 144,999/- only. Galaxy S10 is now officially available.</p>
+              <div class="d-flex justify-content-between">
+
+                <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+                <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+  
+              </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/appimg2.jpeg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">IPhones</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Apple iPhone 12 </span> mobile price is Rs.
+              190,000 as of Aug 28, 2021 and
+              it is updated daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/smimg2.jpg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Samsungs</h5>
+              <p class="text-success font-weight-bold ml-5">Price: PKR 30000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Samsung galaxy s10 </span>price in Pakistan
+              is PKR 144,999/- only. Galaxy S10 is now officially available.</p>
+              <div class="d-flex justify-content-between">
+
+                <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+                <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+  
+              </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/infimg2.jpeg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Infinix</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Infinix Smart HD </span> mobile price is
+              Rs. 14,000 as of Aug 28, 2021 and it is updated
+              daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/appimg2.jpeg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">IPhones</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Apple iPhone 12 </span> mobile price is Rs.
+              190,000 as of Aug 28, 2021 and
+              it is updated daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/infimg3.jpeg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Infinix</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Infinix Smart HD </span> mobile price is
+              Rs. 14,000 as of Aug 28, 2021 and it is updated
+              daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/appimg3.jpg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">IPhones</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Apple iPhone 12 </span> mobile price is Rs.
+              190,000 as of Aug 28, 2021 and
+              it is updated daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/smimg3.jpg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Samsungs</h5>
+              <p class="text-success font-weight-bold ml-5">Price: PKR 30000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Samsung galaxy s10 </span>price in Pakistan
+              is PKR 144,999/- only. Galaxy S10 is now officially available.</p>
+              <div class="d-flex justify-content-between">
+
+                <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+                <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+  
+              </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-3 mt-5">
+        <div class="cards p-2">
+          <img class="card-img-top" src="images/infimg3.jpeg" alt="" height="300">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title font-weight-bold">Infinix</h5>
+              <p class="text-success font-weight-bold ml-auto">Price: PKR 50000</p>
+            </div>
+            <p class="card-text"> <span class="font-weight-bold">Infinix Smart HD </span> mobile price is
+              Rs. 14,000 as of Aug 28, 2021 and it is updated
+              daily from the price list</p>
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-danger text-white w-50">Buy Now</button>
+              <button type="button" class="btn btn-primary text-white w-50 ml-2">Whislist</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

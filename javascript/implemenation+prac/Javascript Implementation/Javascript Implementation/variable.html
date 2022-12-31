@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+
+</head>
+
+<body>
+        <h1>
+                JavaScript
+        </h1>
+        <!-- <button type = "button" onclick="para()">Change Paragraph</button>
+        <p id = "demo">Hello World</p> -->
+
+        <!-- <img src="butterfly1.jpg" id = "img1" alt="butterfly1" width="200px" height = "200px">
+        
+        <button type="button" onclick="change_Image()">Change Image</button> <br> -->
+
+
+        <!-- <form action=""  onsubmit="first_form()" >
+                <input type="text">
+                <input type="submit">
+        </form> -->
+
+
+
+        <!-- <button type="button" onclick="first()">ON CLICK</button>  <br>
+         
+        <img src="butterfly1.jpg" alt="butterfly1" width = "100" height = "100" onmouseover="over()" onmouseout="alert('mouse out')"> -->
+
+        <!-- <input type="text" onfocus="Clickfocus()"> -->
+        <!-- <a href="#" onmouseover="over()" onmouseout="alert('mouse out')">Home</a> -->
+
+
+        <!-- <a href="#" onmouseover="alert('You have placed mouse pointer over a link!');">Place Mouse Over Me</a> -->
+
+        <!-- INITIAL WORK STEP1 -->
+
+        <!-- 
+        <p id = "para1">This is HTML</p>
+        <p >Learn Javascript documnet model</p>
+        <p id = "para2">Extra Learning HTML document</p> -->
+
+
+        <!-- INITIAL WORK STEP2 -->
+        <!-- 
+<div id= "main">
+       <p>SomeThing1</p>
+       <p>SomThing2</p>
+
+</div>
+<p id = "demo_SomeThing">Demo SomeThing</p> -->
+
+
+        <!-- INITIAL WORK Using Form -->
+
+        <form>
+
+                Name<input type="text" id="txt">
+
+
+                <input type="radio" name="gender">Male
+                <input type="radio" name="gender">Female
+
+                <button type="button" onclick="info()">Click</button>
+        </form>
+
+        <p id="fetch">h3</p>
+        <script>
+
+                function info() {
+
+                        var nm = document.getElementById('txt').value;
+                        var gender = document.getElementsByName('gender')[0].checked;
+                        if (gender) {
+                                gndr = "male";
+                        }
+                        else {
+                                gndr = "female";
+                        }
+                        var mm = document.getElementById("fetch").innerHTML = "Your name is: " + nm + " and gender is: " + gndr;
+
+                        console.log(mm);
+                }
+        </script>
+
+
+
+        <!-- 
+        <p id="demo"></p>
+
+        <button type="button" onclick="get()">1</button> -->
+
+
+        <!-- <h3 id = "heading3">Some Text</h3>
+        <button type="button" onclick="button_Click()">Click Me</button> <br>
+
+        <img src="butterfly1.jpg" id = "img1" alt="butterfly1" width="200px" height = "200px">
+        <button type="button" onclick="change_Image()">Change Image</button> <br> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="app.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
